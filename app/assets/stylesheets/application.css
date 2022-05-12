@@ -19,6 +19,12 @@
     --color3:#C98474;
     --color4:#874C62;
  }
+header{
+    background-color: var(--color2);
+}
+footer{
+    background-color: var(--color2);
+}
 p{
     background-color: var(--color4);
 }
