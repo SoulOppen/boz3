@@ -5,11 +5,11 @@ es:
       libro:  "Libro"
     attributes:
       libro:
-        title:  "Titulo del Libro"
-        descrip:  "Categoria Libro"
-        author:  "Autor del Libro"  
-        fechprestm:  "Fecha prestamo Libro"
-        fechdevol:  "Fecha devolucion Libro"
+        title:  "Titulo"
+        descrip:  "Categoria"
+        author:  "Autor"  
+        fechprestm:  "Fecha prestamo"
+        fechdevol:  "Fecha devolucion"
         status:  "Situacion"
         image_url: "[URL] Foto Portada"
     errors:
