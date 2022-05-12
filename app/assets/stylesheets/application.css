@@ -16,14 +16,18 @@
 :root {
     --color1: #A7D2CB;
     --color2: #F2D388;
-    --color3: #C98474;
-    --color4: #874C62;
+    --color3: rgb(201, 131, 115);
+    --d-color3: rgb(255, 131, 115);
+    --color4: rgb(135, 76, 98);
+    --d-color4: rgb(115, 56, 78);
 }
 
 header {
     background-color: var(--color2);
 }
-
+body{
+    background-color: var(--color1);
+}
 footer {
     background-color: var(--color2);
 }
@@ -31,3 +35,17 @@ footer {
 p {
     background-color: var(--color4);
 }
+.btn-boz{
+    background-attachment:var(--color3);
+}
+.btn-boz:hover{
+    background-attachment:var(--d-color3);
+    border:2px
+}
+.lk-boz{
+    background-attachment:var(--color4);
+    text-decoration: none;
+}
+.lk-boz:hover{
+    background-attachment:var(--d-color4);
+}  
