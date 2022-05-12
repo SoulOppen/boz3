@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.1"
+ruby "3.0.3"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
@@ -27,22 +27,6 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# Data Falsa
-# Faker is used to easily generate fake data: names, addresses, phone numbers, etc. https://github.com/faker-ruby/faker
-gem 'faker' #, :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-
-# Paginacion
-# Kaminari is a paginator for Rails https://github.com/kaminari/kaminari
-gem 'kaminari'
-
-# Estilo para kaminari 
-# Bootstrap 4 styling for Kaminari https://github.com/KamilDzierbicki/bootstrap4-kaminari-views
-gem 'bootstrap4-kaminari-views'
-
-# Ransack para formularios de busqueda
-# Ransack is use to implement advanced search capability https://activerecord-hackery.github.io/ransack/
-gem 'ransack'
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -53,7 +37,7 @@ gem 'ransack'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data" #, platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -67,10 +51,6 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-
-  # A mini view framework for console/irb that's easy to use, even while under its influence. http://tagaholic.me/hirb/
-  gem "hirb"
-
 end
 
 group :development do

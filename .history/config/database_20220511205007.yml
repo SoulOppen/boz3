@@ -16,8 +16,7 @@
 #
 default: &default
   adapter: postgresql
-  username: postgres
-  password: postgres
+  
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -84,5 +83,5 @@ test:
 production:
   <<: *default
   database: boz_production
-  username: <%= ENV["BOZ_DATABASE_USER"] %>
+  username: boz
   password: <%= ENV["BOZ_DATABASE_PASSWORD"] %>
