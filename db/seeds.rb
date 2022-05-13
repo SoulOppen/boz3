@@ -7,24 +7,23 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # Ejecutar 'rails db:reset'
-
 require 'faker'
 puts "Poblando Datos..."
 
 10.times do
 
-    status = ["Prestamo","Estante"].sample
-    fechprestm = Faker::Date.between(from: '2021-01-01', to: Date.today)
-    fechdevol = nil
-    (fechdevol = nil; fechdevol = fechprestm + rand(1..100)) if status != "Prestamo" 
-
-    libros=Libro.create(
-      title: Faker::Book.title,
-      author: Faker::Book.author,
-      image_url: "https://loremflickr.com/#{rand(50..200)}/#{rand(50..200)}/all",
-      descrip: ["CienciaFiccion","Fantasia"].sample,
-      status: status,
-      fechprestm: fechprestm,
-      fechdevol: fechdevol
-  )
+	name = ""
+	cost = Faker::Commerce.price
+	price = cost * 0.5
+	
+	products = Product.create(
+		name: Faker::Commerce.product_name ,
+		desciption: Faker::Lorem.sentence(1),
+		cost: cost,
+		price: price,
+		t_schedule: rand(2..6),
+		stock: rand(1..10),
+		img_url: "https://loremflickr.com/#{rand(50..200)}/#{rand(50..200)}/all"
+  	)
 end
+
