@@ -8,8 +8,9 @@
             <%= f.submit "Buscar", class:"btn btn-boz"%>
         <%end%>
     </div>
-<div class="row justify-content-between" id="products">
-  <% @products.each do |product| %>
+<div class="row justify-content" id="products">
+    <%= paginate(@products) %>
+    <% @products.each do |product| %>
     <div class="card col-3 mx-2 my-4">
       <%= render product %>
       <p>
@@ -17,6 +18,7 @@
       </p>
     </div>
   <% end %>
+  <%= paginate(@products) %>
 </div>
 
 <%= link_to "New product", new_product_path,class:"lk-boz"%>
