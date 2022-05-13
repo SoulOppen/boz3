@@ -2,16 +2,16 @@
 es:
   activerecord:
     models:
-      libro:  "Libro"
+      product:  "Products"
     attributes:
-      libro:
-        title:  "Titulo"
-        descrip:  "Categoria"
-        author:  "Autor"  
-        fechprestm:  "Fecha prestamo"
-        fechdevol:  "Fecha devolucion"
-        status:  "Situacion"
-        image_url: "[URL] Foto Portada"
+      product:
+        name:  "Producto"
+        desciption:  "Descipcion"
+        cost:  "Costo"  
+        price:  "Precio"
+        t_schedule:  "Tiempo Reserva"
+        stock:  "Stock"
+        image_url: "[URL] Foto Producto"
     errors:
       messages:
         record_invalid: 'La validación falló: %{errors}'
