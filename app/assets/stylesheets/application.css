@@ -17,35 +17,34 @@
     --color1: #A7D2CB;
     --color2: #F2D388;
     --color3: rgb(201, 131, 115);
-    --d-color3: rgb(255, 131, 115);
+    --d-color3: rgb(150, 131, 115);
     --color4: rgb(135, 76, 98);
-    --d-color4: rgb(115, 56, 78);
+    --d-color4: rgb(95, 45, 68);
 }
 
-header {
-    background-color: var(--color2);
-}
 body{
     background-color: var(--color1);
 }
-footer {
-    background-color: var(--color2);
+h1{
+    color:var(--color3)
 }
-
-p {
-    background-color: var(--color4);
+p{
+    color: var(--color4);
 }
 .btn-boz{
-    background-attachment:var(--color3);
+    background-color: var(--color3);
 }
 .btn-boz:hover{
-    background-attachment:var(--d-color3);
-    border:2px
+    background-color:var(--d-color3);
+    border:5px;
+    border-radius: 1px;
+
 }
 .lk-boz{
-    background-attachment:var(--color4);
+    color:var(--color4);
     text-decoration: none;
 }
 .lk-boz:hover{
-    background-attachment:var(--d-color4);
+    color: var(--d-color4);
+    font-style:italic;
 }  
