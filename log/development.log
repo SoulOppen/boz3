@@ -940,3 +940,916 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 62ms (Views: 52.4ms | ActiveRecord: 0.4ms | Allocations: 5912)
 
 
+Started GET "/products" for ::1 at 2022-05-12 22:52:46 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 332)
+  Rendered products/index.html.erb within layouts/application (Duration: 155.6ms | Allocations: 4377)
+  Rendered layout layouts/application.html.erb (Duration: 221.7ms | Allocations: 8762)
+Completed 200 OK in 247ms (Views: 238.3ms | ActiveRecord: 20.4ms | Allocations: 9993)
+
+
+Started GET "/products/1" for ::1 at 2022-05-12 22:52:52 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered products/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 857)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3154)
+Completed 200 OK in 32ms (Views: 18.6ms | ActiveRecord: 0.6ms | Allocations: 4218)
+
+
+Started GET "/products/1/edit" for ::1 at 2022-05-12 22:53:03 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.5ms | Allocations: 2957)
+  Rendered products/edit.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3361)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 5658)
+Completed 200 OK in 37ms (Views: 24.9ms | ActiveRecord: 0.4ms | Allocations: 6616)
+
+
+Started GET "/products/1" for ::1 at 2022-05-12 22:53:08 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered products/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 2937)
+Completed 200 OK in 25ms (Views: 16.4ms | ActiveRecord: 0.4ms | Allocations: 3841)
+
+
+Started GET "/products" for ::1 at 2022-05-12 22:53:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1004)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 3322)
+Completed 200 OK in 26ms (Views: 20.4ms | ActiveRecord: 0.3ms | Allocations: 3691)
+
+
+Started GET "/products/new" for ::1 at 2022-05-12 22:53:12 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.8ms | Allocations: 2189)
+  Rendered products/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2468)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 4773)
+Completed 200 OK in 32ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 5204)
+
+
+Started GET "/products" for ::1 at 2022-05-12 22:53:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 332)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1908)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 4669)
+Completed 200 OK in 51ms (Views: 42.5ms | ActiveRecord: 0.5ms | Allocations: 5886)
+
+
+Started GET "/products/1" for ::1 at 2022-05-12 22:53:58 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 866)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3163)
+Completed 200 OK in 31ms (Views: 19.2ms | ActiveRecord: 0.4ms | Allocations: 4191)
+
+
+Started GET "/" for ::1 at 2022-05-13 09:46:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 285.4ms | Allocations: 740)
+Completed 200 OK in 954ms (Views: 475.9ms | ActiveRecord: 0.0ms | Allocations: 6480)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:46:33 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (80.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.9ms | Allocations: 424)
+  Rendered products/index.html.erb within layouts/application (Duration: 529.1ms | Allocations: 9562)
+  Rendered layout layouts/application.html.erb (Duration: 1888.1ms | Allocations: 51561)
+Completed 200 OK in 1956ms (Views: 1653.3ms | ActiveRecord: 261.7ms | Allocations: 53820)
+
+
+Started GET "/products/new" for ::1 at 2022-05-13 09:46:46 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+Started GET "/products/new" for ::1 at 2022-05-13 09:46:53 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 10902.7ms | Allocations: 293194)
+  Rendered products/new.html.erb within layouts/application (Duration: 10919.4ms | Allocations: 293564)
+  Rendered layout layouts/application.html.erb (Duration: 10935.0ms | Allocations: 296325)
+Completed 200 OK in 10946ms (Views: 10937.2ms | ActiveRecord: 0.0ms | Allocations: 296863)
+
+
+  Rendered products/_form.html.erb (Duration: 1848.0ms | Allocations: 78654)
+  Rendered products/new.html.erb within layouts/application (Duration: 1849.2ms | Allocations: 78800)
+  Rendered layout layouts/application.html.erb (Duration: 1861.3ms | Allocations: 81123)
+Completed 200 OK in 1880ms (Views: 1863.2ms | ActiveRecord: 0.0ms | Allocations: 81899)
+
+
+Started POST "/products" for ::1 at 2022-05-13 09:46:59 -0400
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "desciption"=>"", "price"=>"", "cost"=>"", "t_schedule"=>"", "stock"=>"", "img_url"=>""}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (47.7ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["desciption", ""], ["price", nil], ["cost", nil], ["t_schedule", nil], ["stock", nil], ["img_url", ""], ["created_at", "2022-05-13 13:47:00.091862"], ["updated_at", "2022-05-13 13:47:00.091862"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/products/2
+Completed 302 Found in 69ms (ActiveRecord: 50.0ms | Allocations: 4015)
+
+
+Started GET "/products/2" for ::1 at 2022-05-13 09:47:00 -0400
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 32)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1115)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 3532)
+Completed 200 OK in 78ms (Views: 18.9ms | ActiveRecord: 0.7ms | Allocations: 6727)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:47:03 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1200)
+  Rendered layout layouts/application.html.erb (Duration: 19.3ms | Allocations: 3519)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.4ms | Allocations: 3889)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:48:57 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 333)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2101)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 4863)
+Completed 200 OK in 78ms (Views: 69.4ms | ActiveRecord: 0.5ms | Allocations: 6090)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:48:59 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 48.4ms | Allocations: 1205)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 3523)
+Completed 200 OK in 83ms (Views: 63.3ms | ActiveRecord: 0.4ms | Allocations: 3908)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:49:19 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 333)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2113)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 4874)
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 0.4ms | Allocations: 6089)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:49:45 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 2088)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 4850)
+Completed 200 OK in 49ms (Views: 41.5ms | ActiveRecord: 0.4ms | Allocations: 6085)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:50:29 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2082)
+  Rendered layout layouts/application.html.erb (Duration: 28.1ms | Allocations: 4843)
+Completed 200 OK in 50ms (Views: 42.1ms | ActiveRecord: 0.6ms | Allocations: 6078)
+
+
+Started GET "/pets" for ::1 at 2022-05-13 09:50:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/pets"):
+  
+Started GET "/products" for ::1 at 2022-05-13 09:51:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2107)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4869)
+Completed 200 OK in 52ms (Views: 44.3ms | ActiveRecord: 0.4ms | Allocations: 6102)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:51:52 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.6ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 2085)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 4846)
+Completed 200 OK in 50ms (Views: 41.6ms | ActiveRecord: 0.4ms | Allocations: 6081)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:52:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 2103)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 4864)
+Completed 200 OK in 67ms (Views: 54.4ms | ActiveRecord: 0.5ms | Allocations: 6099)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:52:25 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.4ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 2076)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 4837)
+Completed 200 OK in 49ms (Views: 41.9ms | ActiveRecord: 0.5ms | Allocations: 6072)
+
+
+Started GET "/products/new" for ::1 at 2022-05-13 09:52:55 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.0ms | Allocations: 2842)
+  Rendered products/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3178)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 5483)
+Completed 200 OK in 36ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 5935)
+
+
+Started POST "/products" for ::1 at 2022-05-13 09:52:57 -0400
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "desciption"=>"", "price"=>"", "cost"=>"", "t_schedule"=>"", "stock"=>"", "img_url"=>""}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["desciption", ""], ["price", nil], ["cost", nil], ["t_schedule", nil], ["stock", nil], ["img_url", ""], ["created_at", "2022-05-13 13:52:57.500868"], ["updated_at", "2022-05-13 13:52:57.500868"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/products/3
+Completed 302 Found in 17ms (ActiveRecord: 1.4ms | Allocations: 2611)
+
+
+Started GET "/products/3" for ::1 at 2022-05-13 09:52:57 -0400
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 931)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3228)
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 0.4ms | Allocations: 4265)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:53:00 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1371)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3689)
+Completed 200 OK in 33ms (Views: 27.0ms | ActiveRecord: 0.4ms | Allocations: 4058)
+
+
+Started GET "/products/new" for ::1 at 2022-05-13 09:53:02 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.0ms | Allocations: 2182)
+  Rendered products/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2302)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4607)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 4981)
+
+
+Started POST "/products" for ::1 at 2022-05-13 09:53:03 -0400
+Processing by ProductsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"", "desciption"=>"", "price"=>"", "cost"=>"", "t_schedule"=>"", "stock"=>"", "img_url"=>""}, "commit"=>"Create Product"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["desciption", ""], ["price", nil], ["cost", nil], ["t_schedule", nil], ["stock", nil], ["img_url", ""], ["created_at", "2022-05-13 13:53:04.109492"], ["updated_at", "2022-05-13 13:53:04.109492"]]
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:27:in `block in create'
+Redirected to http://[::1]:3000/products/4
+Completed 302 Found in 20ms (ActiveRecord: 3.8ms | Allocations: 2503)
+
+
+Started GET "/products/4" for ::1 at 2022-05-13 09:53:04 -0400
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:63:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 672)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2969)
+Completed 200 OK in 25ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 3874)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:53:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1566)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3884)
+Completed 200 OK in 30ms (Views: 24.2ms | ActiveRecord: 0.7ms | Allocations: 4251)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:54:23 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.6ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2441)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 5215)
+Completed 200 OK in 53ms (Views: 45.0ms | ActiveRecord: 0.4ms | Allocations: 6429)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:54:42 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.7ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 2445)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 5206)
+Completed 200 OK in 54ms (Views: 46.2ms | ActiveRecord: 0.4ms | Allocations: 6441)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:55:05 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 15.4ms | Allocations: 2446)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 5219)
+Completed 200 OK in 51ms (Views: 42.3ms | ActiveRecord: 0.4ms | Allocations: 6455)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:55:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 2453)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 5214)
+Completed 200 OK in 52ms (Views: 43.5ms | ActiveRecord: 0.5ms | Allocations: 6449)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:55:36 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.6ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 2425)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 5186)
+Completed 200 OK in 56ms (Views: 48.6ms | ActiveRecord: 0.5ms | Allocations: 6421)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:55:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:6
+  Rendered products/_product.html.erb (Duration: 1.4ms | Allocations: 332)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2441)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 5202)
+Completed 200 OK in 51ms (Views: 43.2ms | ActiveRecord: 0.4ms | Allocations: 6437)
+
+
+Started GET "/products" for ::1 at 2022-05-13 09:57:58 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1617)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1705)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms | Allocations: 2926)
+
+
+  
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    2: 
+    3: <h1>Products</h1>
+    4: <div class="col-10 d-flex justify-content-end">
+    5:         <%= search_form_for @q do |f|%>
+    6:             <%= f.label :t_schedule%>
+    7:             <%= f.search_field :t_schedule_eq%>
+    8:             <%= f.submit "Buscar", class:"btn black"%>
+  
+app/views/products/index.html.erb:5
+Started GET "/products" for ::1 at 2022-05-13 10:00:20 -0400
+Processing by ProductsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2367)
+
+
+  
+NameError (uninitialized constant ProductsController::Book):
+  
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for ::1 at 2022-05-13 10:00:40 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (69.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 386)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 95.4ms | Allocations: 6099)
+  Rendered layout layouts/application.html.erb (Duration: 155.2ms | Allocations: 20940)
+Completed 200 OK in 256ms (Views: 84.9ms | ActiveRecord: 74.8ms | Allocations: 23612)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for ::1 at 2022-05-13 10:00:55 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2192)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4502)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.6ms | Allocations: 5015)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for ::1 at 2022-05-13 10:01:24 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 3314)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 6060)
+Completed 200 OK in 53ms (Views: 44.8ms | ActiveRecord: 0.5ms | Allocations: 7366)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for ::1 at 2022-05-13 10:04:24 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 347)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 5980)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 20733)
+Completed 200 OK in 127ms (Views: 96.5ms | ActiveRecord: 5.8ms | Allocations: 23178)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=1&commit=Buscar" for ::1 at 2022-05-13 10:04:31 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>"1"}, "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 5354)
+
+
+  
+NameError (undefined local variable or method `statuses' for Product:Class):
+  
+app/models/product.rb:2:in `block in <class:Product>'
+app/controllers/products_controller.rb:7:in `index'
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for ::1 at 2022-05-13 10:06:03 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 58)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 5260)
+  Rendered layout layouts/application.html.erb (Duration: 87.7ms | Allocations: 19770)
+Completed 200 OK in 111ms (Views: 86.9ms | ActiveRecord: 5.4ms | Allocations: 21833)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=1&commit=Buscar" for ::1 at 2022-05-13 10:06:06 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>"1"}, "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.0ms | Allocations: 5223)
+
+
+  
+NameError (undefined local variable or method `t_schedules' for Product:Class):
+  
+app/models/product.rb:2:in `block in <class:Product>'
+app/controllers/products_controller.rb:7:in `index'
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for ::1 at 2022-05-13 10:06:43 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 898)
+
+
+  
+SyntaxError (C:/Users/AOppen/Documents/GitHub/Trabajo/Curso/rails/boz/app/models/product.rb:4: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/product.rb:4: syntax error, unexpected `end', expecting end-of-input
+app/models/product.rb:4: syntax error, unexpected `end', expecting end-of-input
+app/models/product.rb:4: syntax error, unexpected `end', expecting end-of-input
+app/controllers/products_controller.rb:6:in `index'
+Started GET "/products" for ::1 at 2022-05-13 10:07:03 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 58)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 5315)
+  Rendered layout layouts/application.html.erb (Duration: 81.1ms | Allocations: 19888)
+Completed 200 OK in 102ms (Views: 79.3ms | ActiveRecord: 5.5ms | Allocations: 21881)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=1&commit=Buscar" for ::1 at 2022-05-13 10:07:05 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>"1"}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" WHERE "products"."t_schedule" = 1[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1532)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3842)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 0.6ms | Allocations: 4685)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=0&commit=Buscar" for ::1 at 2022-05-13 10:07:16 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>"0"}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" WHERE "products"."t_schedule" = 0[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 30)
+  Rendered products/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1700)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 4010)
+Completed 200 OK in 27ms (Views: 20.1ms | ActiveRecord: 0.5ms | Allocations: 4549)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:12:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 3326)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 6072)
+Completed 200 OK in 63ms (Views: 51.9ms | ActiveRecord: 0.5ms | Allocations: 7359)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:16:04 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 2.4ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 3308)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 6054)
+Completed 200 OK in 79ms (Views: 68.3ms | ActiveRecord: 0.8ms | Allocations: 7372)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:16:36 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.4ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 3326)
+  Rendered layout layouts/application.html.erb (Duration: 35.6ms | Allocations: 6072)
+Completed 200 OK in 65ms (Views: 55.0ms | ActiveRecord: 0.5ms | Allocations: 7390)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:17:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 3332)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 6078)
+Completed 200 OK in 59ms (Views: 49.4ms | ActiveRecord: 0.6ms | Allocations: 7396)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:17:41 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 3.8ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 25.2ms | Allocations: 3329)
+  Rendered layout layouts/application.html.erb (Duration: 50.3ms | Allocations: 6075)
+Completed 200 OK in 84ms (Views: 69.2ms | ActiveRecord: 0.6ms | Allocations: 7393)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:17:57 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.8ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 21.9ms | Allocations: 3320)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 6066)
+Completed 200 OK in 67ms (Views: 57.2ms | ActiveRecord: 0.8ms | Allocations: 7384)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:18:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 3311)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 6057)
+Completed 200 OK in 63ms (Views: 54.1ms | ActiveRecord: 0.5ms | Allocations: 7375)
+
+
+Started GET "/" for ::1 at 2022-05-13 10:31:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby30-x64/lib/ruby/gems/3.0.0/gems/railties-7.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 740)
+Completed 200 OK in 54ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 6479)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:31:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.0ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 420)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 901.1ms | Allocations: 294888)
+  Rendered shared/_footer.html.erb (Duration: 3.9ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 1104.3ms | Allocations: 331769)
+Completed 200 OK in 1136ms (Views: 1104.6ms | ActiveRecord: 14.4ms | Allocations: 334729)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:32:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2459)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 280.1ms | Allocations: 8397)
+Completed 200 OK in 291ms (Views: 281.9ms | ActiveRecord: 0.9ms | Allocations: 8895)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:32:39 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2245)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 74.1ms | Allocations: 6755)
+Completed 200 OK in 83ms (Views: 75.8ms | ActiveRecord: 0.5ms | Allocations: 7183)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:33:04 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2238)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 77.8ms | Allocations: 7692)
+Completed 200 OK in 85ms (Views: 78.4ms | ActiveRecord: 0.9ms | Allocations: 8112)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:34:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.5ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 3313)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 6317)
+Completed 200 OK in 65ms (Views: 55.6ms | ActiveRecord: 0.5ms | Allocations: 7591)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:35:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2258)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered layout layouts/application.html.erb (Duration: 122.1ms | Allocations: 6890)
+Completed 200 OK in 130ms (Views: 123.3ms | ActiveRecord: 0.6ms | Allocations: 7368)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:36:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3322)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 117)
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 6326)
+Completed 200 OK in 60ms (Views: 50.6ms | ActiveRecord: 0.5ms | Allocations: 7596)
+
+
+Started GET "/products" for ::1 at 2022-05-13 10:37:35 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:12
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 327)
+  Rendered products/_product.html.erb (Duration: 0.2ms | Allocations: 26)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered products/_product.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered products/index.html.erb within layouts/application (Duration: 16.5ms | Allocations: 3328)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 116)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 6332)
+Completed 200 OK in 60ms (Views: 51.6ms | ActiveRecord: 0.5ms | Allocations: 7654)
+
+

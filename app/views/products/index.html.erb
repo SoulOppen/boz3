@@ -1,13 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Products</h1>
-
-<div id="products">
+<div class="col-10 d-flex justify-content-end w-100">
+        <%= search_form_for @q do |f|%>
+            <%= f.label :t_schedule%>
+            <%= f.search_field :t_schedule_eq%>
+            <%= f.submit "Buscar", class:"btn btn-boz"%>
+        <%end%>
+    </div>
+<div class="row justify-content-between" id="products">
   <% @products.each do |product| %>
-    <%= render product %>
-    <p>
+    <div class="card col-3 mx-2 my-4">
+      <%= render product %>
+      <p>
       <%= link_to "Show this product", product,class:"lk-boz" %>
-    </p>
+      </p>
+    </div>
   <% end %>
 </div>
 

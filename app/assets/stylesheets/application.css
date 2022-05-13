@@ -25,6 +25,10 @@
 body{
     background-color: var(--color1);
 }
+footer{
+    background-color: var(--color2);
+    padding: 1%;
+}
 h1{
     color:var(--color3)
 }
