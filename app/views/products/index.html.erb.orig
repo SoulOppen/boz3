@@ -10,7 +10,9 @@
             <%= f.search_field :t_schedule_eq%>
             <%= f.submit "Buscar", class:"btn btn-boz"%>
         <%end%>
-    </div>
+</div>
+
+
 <div class="row justify-content-center" id="products">
 
     <% @products.each do |product| %>
