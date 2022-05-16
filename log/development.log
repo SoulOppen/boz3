@@ -10023,3 +10023,199 @@ Processing by ProductsController#index as HTML
 Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 0.9ms | Allocations: 20331)
 
 
+Started GET "/products/36" for 127.0.0.1 at 2022-05-16 01:10:54 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mProduct Load (4.7ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 29.1ms | Allocations: 778)
+  Rendered products/show.html.erb within layouts/application (Duration: 73.8ms | Allocations: 1821)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 125.1ms | Allocations: 4769)
+Completed 200 OK in 249ms (Views: 158.1ms | ActiveRecord: 4.7ms | Allocations: 6215)
+
+
+  [1m[36mProduct Load (3.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (244.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "boz_development"[0m
+  [1m[35m (251.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "boz_test"[0m
+  [1m[35m (881.8ms)[0m  [1m[35mCREATE DATABASE "boz_development" ENCODING = 'unicode'[0m
+  [1m[35m (831.0ms)[0m  [1m[35mCREATE DATABASE "boz_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (39.5ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "desciption" text, "price" integer, "cost" integer, "t_schedule" integer, "stock" integer, "img_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220513021848)[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-16 05:14:16.627881"], ["updated_at", "2022-05-16 05:14:16.627881"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "f80d412cb665020157d908d5d8df34f4430275d1"], ["created_at", "2022-05-16 05:14:16.640254"], ["updated_at", "2022-05-16 05:14:16.640254"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products" CASCADE[0m
+  [1m[35m (44.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" bigserial primary key, "name" character varying, "desciption" text, "price" integer, "cost" integer, "t_schedule" integer, "stock" integer, "img_url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220513021848)[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-16 05:14:16.897571"], ["updated_at", "2022-05-16 05:14:16.897571"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-05-16 05:14:16.905593"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "f80d412cb665020157d908d5d8df34f4430275d1"], ["created_at", "2022-05-16 05:14:16.910968"], ["updated_at", "2022-05-16 05:14:16.910968"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (2.2ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Enormous Paper Bag"], ["desciption", "[\"Et neque consequuntur.\", \"Et tempora qui.\"]"], ["price", 66620], ["cost", 33310], ["t_schedule", 5], ["stock", 8], ["img_url", "https://loremflickr.com/113/55/all"], ["created_at", "2022-05-16 05:14:17.823417"], ["updated_at", "2022-05-16 05:14:17.823417"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lightweight Granite Shoes"], ["desciption", "[\"Corrupti earum unde.\", \"Nulla maiores corrupti.\"]"], ["price", 135760], ["cost", 67880], ["t_schedule", 4], ["stock", 1], ["img_url", "https://loremflickr.com/95/137/all"], ["created_at", "2022-05-16 05:14:17.832106"], ["updated_at", "2022-05-16 05:14:17.832106"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fantastic Silk Hat"], ["desciption", "[\"Dolor repellat non.\", \"Aut at amet.\"]"], ["price", 28780], ["cost", 14390], ["t_schedule", 6], ["stock", 3], ["img_url", "https://loremflickr.com/140/92/all"], ["created_at", "2022-05-16 05:14:17.836828"], ["updated_at", "2022-05-16 05:14:17.836828"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ergonomic Concrete Knife"], ["desciption", "[\"Repudiandae voluptates voluptatem.\", \"Accusamus enim a.\"]"], ["price", 148380], ["cost", 74190], ["t_schedule", 2], ["stock", 8], ["img_url", "https://loremflickr.com/185/118/all"], ["created_at", "2022-05-16 05:14:17.841931"], ["updated_at", "2022-05-16 05:14:17.841931"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Aerodynamic Copper Computer"], ["desciption", "[\"Eos similique labore.\", \"Provident maiores illo.\"]"], ["price", 40700], ["cost", 20350], ["t_schedule", 2], ["stock", 1], ["img_url", "https://loremflickr.com/78/64/all"], ["created_at", "2022-05-16 05:14:17.847177"], ["updated_at", "2022-05-16 05:14:17.847177"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fantastic Marble Hat"], ["desciption", "[\"Enim et quia.\", \"Et aperiam sapiente.\"]"], ["price", 165400], ["cost", 82700], ["t_schedule", 4], ["stock", 7], ["img_url", "https://loremflickr.com/179/138/all"], ["created_at", "2022-05-16 05:14:17.852352"], ["updated_at", "2022-05-16 05:14:17.852352"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Heavy Duty Aluminum Knife"], ["desciption", "[\"Molestiae quia voluptatum.\", \"Dolorem pariatur maxime.\"]"], ["price", 5220], ["cost", 2610], ["t_schedule", 6], ["stock", 2], ["img_url", "https://loremflickr.com/177/65/all"], ["created_at", "2022-05-16 05:14:17.859298"], ["updated_at", "2022-05-16 05:14:17.859298"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mediocre Plastic Lamp"], ["desciption", "[\"Necessitatibus quas ipsa.\", \"Ullam et qui.\"]"], ["price", 39120], ["cost", 19560], ["t_schedule", 6], ["stock", 5], ["img_url", "https://loremflickr.com/171/199/all"], ["created_at", "2022-05-16 05:14:17.864737"], ["updated_at", "2022-05-16 05:14:17.864737"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Enormous Iron Shirt"], ["desciption", "[\"Eaque in voluptatem.\", \"Inventore exercitationem praesentium.\"]"], ["price", 116560], ["cost", 58280], ["t_schedule", 2], ["stock", 4], ["img_url", "https://loremflickr.com/126/76/all"], ["created_at", "2022-05-16 05:14:17.869500"], ["updated_at", "2022-05-16 05:14:17.869500"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Rustic Paper Bottle"], ["desciption", "[\"Incidunt dolores tenetur.\", \"Ut ipsa enim.\"]"], ["price", 72100], ["cost", 36050], ["t_schedule", 5], ["stock", 10], ["img_url", "https://loremflickr.com/54/120/all"], ["created_at", "2022-05-16 05:14:17.874712"], ["updated_at", "2022-05-16 05:14:17.874712"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Lightweight Rubber Table"], ["desciption", "[\"Molestiae quia adipisci.\", \"Exercitationem consectetur vel.\"]"], ["price", 153340], ["cost", 76670], ["t_schedule", 4], ["stock", 2], ["img_url", "https://loremflickr.com/103/178/all"], ["created_at", "2022-05-16 05:14:17.879978"], ["updated_at", "2022-05-16 05:14:17.879978"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Durable Steel Shoes"], ["desciption", "[\"Et et ex.\", \"Beatae sint labore.\"]"], ["price", 8060], ["cost", 4030], ["t_schedule", 5], ["stock", 8], ["img_url", "https://loremflickr.com/126/191/all"], ["created_at", "2022-05-16 05:14:17.885505"], ["updated_at", "2022-05-16 05:14:17.885505"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Enormous Steel Watch"], ["desciption", "[\"At error est.\", \"Commodi accusantium delectus.\"]"], ["price", 46720], ["cost", 23360], ["t_schedule", 4], ["stock", 5], ["img_url", "https://loremflickr.com/148/150/all"], ["created_at", "2022-05-16 05:14:17.890693"], ["updated_at", "2022-05-16 05:14:17.890693"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mediocre Bronze Plate"], ["desciption", "[\"Eligendi iure ullam.\", \"Laborum sequi excepturi.\"]"], ["price", 44700], ["cost", 22350], ["t_schedule", 3], ["stock", 5], ["img_url", "https://loremflickr.com/157/191/all"], ["created_at", "2022-05-16 05:14:17.896042"], ["updated_at", "2022-05-16 05:14:17.896042"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Incredible Paper Chair"], ["desciption", "[\"Ratione repudiandae aperiam.\", \"Et libero assumenda.\"]"], ["price", 101540], ["cost", 50770], ["t_schedule", 4], ["stock", 9], ["img_url", "https://loremflickr.com/174/91/all"], ["created_at", "2022-05-16 05:14:17.901532"], ["updated_at", "2022-05-16 05:14:17.901532"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mediocre Plastic Shoes"], ["desciption", "[\"Ab reprehenderit voluptates.\", \"Repellendus fugiat et.\"]"], ["price", 173420], ["cost", 86710], ["t_schedule", 5], ["stock", 2], ["img_url", "https://loremflickr.com/195/141/all"], ["created_at", "2022-05-16 05:14:17.906522"], ["updated_at", "2022-05-16 05:14:17.906522"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sleek Paper Table"], ["desciption", "[\"Dignissimos ipsam veniam.\", \"Officia non accusantium.\"]"], ["price", 57940], ["cost", 28970], ["t_schedule", 6], ["stock", 3], ["img_url", "https://loremflickr.com/179/199/all"], ["created_at", "2022-05-16 05:14:17.911507"], ["updated_at", "2022-05-16 05:14:17.911507"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Synergistic Steel Car"], ["desciption", "[\"Facilis a possimus.\", \"Et magnam aut.\"]"], ["price", 90180], ["cost", 45090], ["t_schedule", 5], ["stock", 5], ["img_url", "https://loremflickr.com/105/159/all"], ["created_at", "2022-05-16 05:14:17.917233"], ["updated_at", "2022-05-16 05:14:17.917233"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Small Marble Shoes"], ["desciption", "[\"Labore deserunt id.\", \"Possimus ut maxime.\"]"], ["price", 117080], ["cost", 58540], ["t_schedule", 5], ["stock", 3], ["img_url", "https://loremflickr.com/156/104/all"], ["created_at", "2022-05-16 05:14:17.921979"], ["updated_at", "2022-05-16 05:14:17.921979"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Heavy Duty Silk Watch"], ["desciption", "[\"Facilis veniam provident.\", \"Qui dignissimos voluptatem.\"]"], ["price", 31020], ["cost", 15510], ["t_schedule", 4], ["stock", 5], ["img_url", "https://loremflickr.com/78/59/all"], ["created_at", "2022-05-16 05:14:17.926772"], ["updated_at", "2022-05-16 05:14:17.926772"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Durable Marble Wallet"], ["desciption", "[\"A debitis ex.\", \"Temporibus omnis dicta.\"]"], ["price", 174080], ["cost", 87040], ["t_schedule", 2], ["stock", 3], ["img_url", "https://loremflickr.com/70/116/all"], ["created_at", "2022-05-16 05:14:17.931642"], ["updated_at", "2022-05-16 05:14:17.931642"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intelligent Rubber Pants"], ["desciption", "[\"Accusamus fugit iure.\", \"Unde eligendi cupiditate.\"]"], ["price", 159700], ["cost", 79850], ["t_schedule", 5], ["stock", 3], ["img_url", "https://loremflickr.com/196/199/all"], ["created_at", "2022-05-16 05:14:17.936493"], ["updated_at", "2022-05-16 05:14:17.936493"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Heavy Duty Aluminum Lamp"], ["desciption", "[\"Aut veniam qui.\", \"Quae et est.\"]"], ["price", 182900], ["cost", 91450], ["t_schedule", 5], ["stock", 9], ["img_url", "https://loremflickr.com/188/69/all"], ["created_at", "2022-05-16 05:14:17.941124"], ["updated_at", "2022-05-16 05:14:17.941124"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intelligent Linen Knife"], ["desciption", "[\"Quibusdam quo tempora.\", \"Nihil neque distinctio.\"]"], ["price", 77240], ["cost", 38620], ["t_schedule", 4], ["stock", 6], ["img_url", "https://loremflickr.com/137/106/all"], ["created_at", "2022-05-16 05:14:17.945891"], ["updated_at", "2022-05-16 05:14:17.945891"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sleek Steel Car"], ["desciption", "[\"Aliquid perspiciatis quam.\", \"Fugit et magnam.\"]"], ["price", 152060], ["cost", 76030], ["t_schedule", 6], ["stock", 10], ["img_url", "https://loremflickr.com/70/136/all"], ["created_at", "2022-05-16 05:14:17.950660"], ["updated_at", "2022-05-16 05:14:17.950660"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Durable Steel Bag"], ["desciption", "[\"Autem repudiandae quam.\", \"Id aut est.\"]"], ["price", 48500], ["cost", 24250], ["t_schedule", 4], ["stock", 3], ["img_url", "https://loremflickr.com/158/140/all"], ["created_at", "2022-05-16 05:14:17.955446"], ["updated_at", "2022-05-16 05:14:17.955446"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fantastic Copper Computer"], ["desciption", "[\"Dolore eos aspernatur.\", \"Incidunt qui sit.\"]"], ["price", 53540], ["cost", 26770], ["t_schedule", 2], ["stock", 5], ["img_url", "https://loremflickr.com/117/76/all"], ["created_at", "2022-05-16 05:14:17.960102"], ["updated_at", "2022-05-16 05:14:17.960102"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intelligent Iron Hat"], ["desciption", "[\"Dicta dolorem maiores.\", \"Veritatis ut sequi.\"]"], ["price", 97340], ["cost", 48670], ["t_schedule", 3], ["stock", 5], ["img_url", "https://loremflickr.com/87/195/all"], ["created_at", "2022-05-16 05:14:17.965280"], ["updated_at", "2022-05-16 05:14:17.965280"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Enormous Copper Chair"], ["desciption", "[\"Omnis laboriosam consectetur.\", \"Quam blanditiis architecto.\"]"], ["price", 190500], ["cost", 95250], ["t_schedule", 2], ["stock", 7], ["img_url", "https://loremflickr.com/174/104/all"], ["created_at", "2022-05-16 05:14:17.970114"], ["updated_at", "2022-05-16 05:14:17.970114"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ergonomic Paper Coat"], ["desciption", "[\"Repellat voluptate sed.\", \"Tempore quasi omnis.\"]"], ["price", 138520], ["cost", 69260], ["t_schedule", 3], ["stock", 8], ["img_url", "https://loremflickr.com/200/120/all"], ["created_at", "2022-05-16 05:14:17.974870"], ["updated_at", "2022-05-16 05:14:17.974870"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Practical Paper Watch"], ["desciption", "[\"Et cumque aut.\", \"Placeat commodi debitis.\"]"], ["price", 124760], ["cost", 62380], ["t_schedule", 5], ["stock", 2], ["img_url", "https://loremflickr.com/159/81/all"], ["created_at", "2022-05-16 05:14:17.979637"], ["updated_at", "2022-05-16 05:14:17.979637"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Durable Steel Lamp"], ["desciption", "[\"Ut qui nesciunt.\", \"A quae ex.\"]"], ["price", 153780], ["cost", 76890], ["t_schedule", 6], ["stock", 1], ["img_url", "https://loremflickr.com/82/69/all"], ["created_at", "2022-05-16 05:14:17.984347"], ["updated_at", "2022-05-16 05:14:17.984347"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Gorgeous Copper Gloves"], ["desciption", "[\"Molestiae praesentium porro.\", \"Occaecati ut dolores.\"]"], ["price", 50440], ["cost", 25220], ["t_schedule", 4], ["stock", 7], ["img_url", "https://loremflickr.com/168/76/all"], ["created_at", "2022-05-16 05:14:17.989041"], ["updated_at", "2022-05-16 05:14:17.989041"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ergonomic Linen Car"], ["desciption", "[\"Non non ex.\", \"Aliquid provident ipsa.\"]"], ["price", 83260], ["cost", 41630], ["t_schedule", 6], ["stock", 10], ["img_url", "https://loremflickr.com/107/152/all"], ["created_at", "2022-05-16 05:14:17.993926"], ["updated_at", "2022-05-16 05:14:17.993926"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sleek Plastic Bag"], ["desciption", "[\"Dicta sunt dolorum.\", \"Et magnam quibusdam.\"]"], ["price", 179600], ["cost", 89800], ["t_schedule", 2], ["stock", 4], ["img_url", "https://loremflickr.com/189/89/all"], ["created_at", "2022-05-16 05:14:17.998792"], ["updated_at", "2022-05-16 05:14:17.998792"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Awesome Linen Chair"], ["desciption", "[\"Nobis sunt praesentium.\", \"Officiis vero sed.\"]"], ["price", 154740], ["cost", 77370], ["t_schedule", 4], ["stock", 1], ["img_url", "https://loremflickr.com/161/155/all"], ["created_at", "2022-05-16 05:14:18.003490"], ["updated_at", "2022-05-16 05:14:18.003490"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Incredible Silk Pants"], ["desciption", "[\"Perspiciatis suscipit explicabo.\", \"Reprehenderit eum in.\"]"], ["price", 193920], ["cost", 96960], ["t_schedule", 2], ["stock", 5], ["img_url", "https://loremflickr.com/99/161/all"], ["created_at", "2022-05-16 05:14:18.008300"], ["updated_at", "2022-05-16 05:14:18.008300"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fantastic Silk Pants"], ["desciption", "[\"Magnam ut deserunt.\", \"Consequatur non aut.\"]"], ["price", 14280], ["cost", 7140], ["t_schedule", 5], ["stock", 1], ["img_url", "https://loremflickr.com/120/55/all"], ["created_at", "2022-05-16 05:14:18.013371"], ["updated_at", "2022-05-16 05:14:18.013371"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Fantastic Paper Chair"], ["desciption", "[\"Quia aspernatur officiis.\", \"Rerum doloribus quis.\"]"], ["price", 82720], ["cost", 41360], ["t_schedule", 2], ["stock", 10], ["img_url", "https://loremflickr.com/84/151/all"], ["created_at", "2022-05-16 05:14:18.017560"], ["updated_at", "2022-05-16 05:14:18.017560"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Ergonomic Leather Keyboard"], ["desciption", "[\"Qui cum eos.\", \"Dicta natus voluptatum.\"]"], ["price", 156160], ["cost", 78080], ["t_schedule", 2], ["stock", 10], ["img_url", "https://loremflickr.com/74/102/all"], ["created_at", "2022-05-16 05:14:18.022007"], ["updated_at", "2022-05-16 05:14:18.022007"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Small Leather Knife"], ["desciption", "[\"Quia sint dolorem.\", \"Et hic aut.\"]"], ["price", 82160], ["cost", 41080], ["t_schedule", 3], ["stock", 9], ["img_url", "https://loremflickr.com/139/136/all"], ["created_at", "2022-05-16 05:14:18.026031"], ["updated_at", "2022-05-16 05:14:18.026031"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Durable Aluminum Lamp"], ["desciption", "[\"Et aut soluta.\", \"Accusamus facilis esse.\"]"], ["price", 93660], ["cost", 46830], ["t_schedule", 4], ["stock", 1], ["img_url", "https://loremflickr.com/83/138/all"], ["created_at", "2022-05-16 05:14:18.030396"], ["updated_at", "2022-05-16 05:14:18.030396"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Mediocre Iron Chair"], ["desciption", "[\"At rerum odit.\", \"Totam corrupti quam.\"]"], ["price", 55380], ["cost", 27690], ["t_schedule", 6], ["stock", 7], ["img_url", "https://loremflickr.com/176/174/all"], ["created_at", "2022-05-16 05:14:18.034335"], ["updated_at", "2022-05-16 05:14:18.034335"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Intelligent Steel Shirt"], ["desciption", "[\"Labore consequuntur magnam.\", \"Voluptates laudantium et.\"]"], ["price", 44120], ["cost", 22060], ["t_schedule", 6], ["stock", 8], ["img_url", "https://loremflickr.com/67/129/all"], ["created_at", "2022-05-16 05:14:18.038433"], ["updated_at", "2022-05-16 05:14:18.038433"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Synergistic Concrete Computer"], ["desciption", "[\"Asperiores quod ullam.\", \"Neque ratione consequuntur.\"]"], ["price", 161420], ["cost", 80710], ["t_schedule", 5], ["stock", 5], ["img_url", "https://loremflickr.com/62/122/all"], ["created_at", "2022-05-16 05:14:18.042363"], ["updated_at", "2022-05-16 05:14:18.042363"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m

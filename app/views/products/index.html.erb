@@ -41,10 +41,10 @@
                             <%= prod.desciption %>
                         </td>
                         <td class="align-middle text-center">
-                            <%= number_to_currency(prod.cost, unit: "$ ", separator: ",", delimiter: ".", format: " %u %n") %>
+                            <%= number_to_currency(prod.cost, unit: "$ ", precision: 0, separator: ",", delimiter: ".", format: " %u %n") %>
                         </td>
                         <td class="align-middle text-center">
-                            <%= number_to_currency(prod.price, unit: "$ ", separator: ",", delimiter: ".", format: " %u %n") %>
+                            <%= number_to_currency(prod.price, unit: "$ ", precision: 0, separator: ",", delimiter: ".", format: " %u %n") %>
                         </td>
                        <td class="align-middle text-center">
                             <%= prod.stock %>
