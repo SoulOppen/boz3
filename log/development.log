@@ -10219,3 +10219,64 @@ Completed 200 OK in 249ms (Views: 158.1ms | ActiveRecord: 4.7ms | Allocations: 6
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mProduct Create (0.4ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Synergistic Concrete Computer"], ["desciption", "[\"Asperiores quod ullam.\", \"Neque ratione consequuntur.\"]"], ["price", 161420], ["cost", 80710], ["t_schedule", 5], ["stock", 5], ["img_url", "https://loremflickr.com/62/122/all"], ["created_at", "2022-05-16 05:14:18.042363"], ["updated_at", "2022-05-16 05:14:18.042363"]]
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:14:36 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (5.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 675.7ms | Allocations: 325920)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 905.2ms | Allocations: 362386)
+Completed 200 OK in 948ms (Views: 901.9ms | ActiveRecord: 19.1ms | Allocations: 368190)
+
+
+Started GET "/products/15" for 127.0.0.1 at 2022-05-16 01:14:55 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 2.7ms | Allocations: 808)
+  Rendered products/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2041)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 4540)
+Completed 200 OK in 43ms (Views: 28.4ms | ActiveRecord: 0.9ms | Allocations: 7049)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:15:57 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 74.9ms | Allocations: 27003)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 92.7ms | Allocations: 29930)
+Completed 200 OK in 115ms (Views: 101.2ms | ActiveRecord: 1.5ms | Allocations: 31145)
+
+
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:19:02 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (3.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:13
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 153.3ms | Allocations: 26932)
+  Rendered shared/_footer.html.erb (Duration: 0.6ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 197.4ms | Allocations: 29859)
+Completed 200 OK in 272ms (Views: 214.2ms | ActiveRecord: 4.4ms | Allocations: 31053)
+
+
