@@ -8,17 +8,19 @@
             <%= f.submit "Buscar", class:"btn btn-boz"%>
         <%end%>
     </div>
-<div class="row justify-content" id="products">
-    <%= paginate(@products) %>
+<div class="row justify-content-center" id="products">
+
     <% @products.each do |product| %>
-    <div class="card col-3 mx-2 my-4">
+    <div class="card col-5 mx-3 my-4">
       <%= render product %>
       <p>
       <%= link_to "Show this product", product,class:"lk-boz" %>
       </p>
     </div>
   <% end %>
+  <div class="items-allign-center">
   <%= paginate(@products) %>
+  </div>
 </div>
 
 <%= link_to "New product", new_product_path,class:"lk-boz"%>

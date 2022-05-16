@@ -2,16 +2,16 @@
 es:
   activerecord:
     models:
-      product:  "Products"
+      product: "Producto"
     attributes:
       product:
-        name:  "Producto"
-        desciption:  "Descipcion"
-        cost:  "Costo"  
-        price:  "Precio"
-        t_schedule:  "Tiempo Reserva"
-        stock:  "Stock"
-        image_url: "[URL] Foto Producto"
+        name: "Nombre"
+        description: "Descripcion"
+        price: "Precio"  
+        cost: "Costo"
+        t_schedule: "Agenda"
+        stock: "Stock"
+        img_url: "[URL] Foto Portada"
     errors:
       messages:
         record_invalid: 'La validación falló: %{errors}'
