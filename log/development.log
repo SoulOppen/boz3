@@ -7593,3 +7593,2433 @@ Completed 200 OK in 256ms (Views: 219.7ms | ActiveRecord: 2.1ms | Allocations: 2
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("name", "desciption", "price", "cost", "t_schedule", "stock", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Synergistic Copper Plate"], ["desciption", "[\"Enim voluptatem iure.\", \"Tempora autem rerum.\"]"], ["price", 162380], ["cost", 81190], ["t_schedule", 3], ["stock", 7], ["img_url", "https://loremflickr.com/179/144/all"], ["created_at", "2022-05-16 04:00:39.423328"], ["updated_at", "2022-05-16 04:00:39.423328"]]
   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:01:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (6.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:13
+  Rendered products/_product.html.erb (Duration: 17.2ms | Allocations: 1819)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 434)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.8ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 422)
+  [1m[36mProduct Count (5.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 798.9ms | Allocations: 317031)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 927.7ms | Allocations: 353784)
+Completed 200 OK in 982ms (Views: 920.3ms | ActiveRecord: 25.1ms | Allocations: 358498)
+
+
+Started GET "/products/32" for 127.0.0.1 at 2022-05-16 00:02:37 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 483)
+  Rendered products/show.html.erb within layouts/application (Duration: 53.6ms | Allocations: 1460)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 3956)
+Completed 200 OK in 249ms (Views: 71.4ms | ActiveRecord: 0.8ms | Allocations: 13537)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:02:55 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:13
+  Rendered products/_product.html.erb (Duration: 0.8ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 1.0ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 2.3ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 2.0ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 1.3ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 4.0ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 1.1ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.4ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 3.7ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 2.5ms | Allocations: 421)
+  Rendered products/_product.html.erb (Duration: 0.7ms | Allocations: 422)
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 422)
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:22
+  Rendered products/index.html.erb within layouts/application (Duration: 91.8ms | Allocations: 15288)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 106.7ms | Allocations: 17677)
+Completed 200 OK in 117ms (Views: 106.3ms | ActiveRecord: 1.8ms | Allocations: 18162)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:24:37 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  Rendered products/index.html.erb within layouts/application (Duration: 280.1ms | Allocations: 13575)
+  Rendered layout layouts/application.html.erb (Duration: 282.6ms | Allocations: 13682)
+Completed 500 Internal Server Error in 637ms (ActiveRecord: 35.7ms | Allocations: 17068)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    25:                 </tr>
+    26:             </thead>
+    27:             <tbody class="text-decoration-none" >
+    28:                 <% @productos.each do |prod| %>
+    29:                     <tr>    
+    30:                         <td class="align-middle text-center" >
+    31:                             <%= image_tag(prod.image_url, size: "60x60") %>    
+  
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:24:53 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (9.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 49.5ms | Allocations: 12621)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 12716)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 10.1ms | Allocations: 13787)
+
+
+  
+ActionView::Template::Error (undefined method `image_url' for #<Product id: 40, name: "Enormous Copper Knife", desciption: "[\"Eaque quis non.\", \"Libero est iure.\"]", price: 83520, cost: 41760, t_schedule: 2, stock: 8, img_url: "https://loremflickr.com/138/77/all", created_at: "2022-05-16 00:00:39.399622000 -0400", updated_at: "2022-05-16 00:00:39.399622000 -0400">
+Did you mean?  img_url
+               img_url?
+               img_url=):
+    28:                 <% @products.each do |prod| %>
+    29:                     <tr>    
+    30:                         <td class="align-middle text-center" >
+    31:                             <%= image_tag(prod.image_url, size: "60x60") %>    
+    32:                         </td>
+    33:                         <td class="align-middle text-center">
+    34:                             <h6><strong><%= prod.name %><h6>
+  
+app/views/products/index.html.erb:31
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:25:19 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 26.1ms | Allocations: 10105)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 10199)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms | Allocations: 11252)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `libro' for #<ActionView::Base:0x0000000000c6e8>):
+    61:                                 <!-- Protección CSRF -->
+    62:                                 <%= token_tag nil %> 
+    63:     
+    64:                                 <%= button_to "Eliminar", libro_path(libro), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" }, :html => { :method => :delete, :remote => true}, onclick: "return confirmDestroy('Seguro que desea eliminar el Libro seleccionado?')"%>
+    65: 
+    66:                                 <%= button_to "Destroy this product", @product, method: :delete,class:"btn btn-boz" %>
+    67: 
+  
+app/views/products/index.html.erb:64
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:26:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 21.8ms | Allocations: 10206)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 10300)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.6ms | Allocations: 11351)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x0000000000ca30>
+Did you mean?  @products):
+    61:                                 <!-- Protección CSRF -->
+    62:                                 <%= token_tag nil %> 
+    63:     
+    64:                                 <%= button_to "Eliminar", libro_path(product), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" }, :html => { :method => :delete, :remote => true}, onclick: "return confirmDestroy('Seguro que desea eliminar el Libro seleccionado?')"%>
+    65: 
+    66:                                 <%= button_to "Destroy this product", @product, method: :delete,class:"btn btn-boz" %>
+    67: 
+  
+app/views/products/index.html.erb:64
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:28:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 164.0ms | Allocations: 10216)
+  Rendered layout layouts/application.html.erb (Duration: 164.9ms | Allocations: 10310)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 2.2ms | Allocations: 11363)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x0000000000cd78>
+Did you mean?  @products):
+    61:                                 <!-- Protección CSRF -->
+    62:                                 <%= token_tag nil %> 
+    63:     
+    64:                                 <%= button_to "Eliminar", pdroduct_path(product), method: :delete, class: "btn btn-danger btn-sm", onclick: "return confirmDestroy('Seguro que desea eliminar el Producto seleccionado?')"%>
+    65: 
+    66:                                 <%= button_to "Destroy this product", @product, method: :delete,class:"btn btn-boz" %>
+    67: 
+  
+app/views/products/index.html.erb:64
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:28:42 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (17.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 256.1ms | Allocations: 32809)
+  Rendered shared/_footer.html.erb (Duration: 1.6ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 307.7ms | Allocations: 35754)
+Completed 200 OK in 323ms (Views: 298.3ms | ActiveRecord: 19.8ms | Allocations: 36834)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:30:02 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 159.5ms | Allocations: 32739)
+  Rendered shared/_footer.html.erb (Duration: 3.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 190.1ms | Allocations: 35667)
+Completed 200 OK in 240ms (Views: 212.5ms | ActiveRecord: 1.1ms | Allocations: 36745)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:30:37 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:30:38 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 153.3ms | Allocations: 29647)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 167.3ms | Allocations: 32145)
+Completed 200 OK in 234ms (Views: 167.0ms | ActiveRecord: 1.7ms | Allocations: 32664)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:31:46 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:78
+  Rendered products/index.html.erb within layouts/application (Duration: 176.6ms | Allocations: 32820)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 205.1ms | Allocations: 35748)
+Completed 200 OK in 259ms (Views: 226.1ms | ActiveRecord: 2.6ms | Allocations: 36770)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:32:21 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:78
+  Rendered products/index.html.erb within layouts/application (Duration: 139.8ms | Allocations: 32823)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 162.5ms | Allocations: 35766)
+Completed 200 OK in 179ms (Views: 170.3ms | ActiveRecord: 1.1ms | Allocations: 36844)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:39:25 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (2.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 254.4ms | Allocations: 32964)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 308.8ms | Allocations: 35892)
+Completed 200 OK in 606ms (Views: 326.5ms | ActiveRecord: 43.9ms | Allocations: 39311)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:39:55 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 59.9ms | Allocations: 7706)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 7800)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 1.1ms | Allocations: 8849)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x0000011a7ba438f0>::C):
+    28:                 <% @products.each do |prod| %>
+    29:                     <tr>    
+    30:                         <td class="align-middle text-center" >
+    31:                             <%= c += C %>   
+    32:                         </td>
+    33:                         <td class="align-middle text-center" >
+    34:                             <%= image_tag(prod.img_url, size: "60x60") %>    
+  
+app/views/products/index.html.erb:31
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:40:21 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (7.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 139.0ms | Allocations: 32847)
+  Rendered shared/_footer.html.erb (Duration: 2.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 171.0ms | Allocations: 35790)
+Completed 200 OK in 206ms (Views: 174.3ms | ActiveRecord: 8.6ms | Allocations: 36870)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:40:31 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 120.3ms | Allocations: 32818)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 143.3ms | Allocations: 35746)
+Completed 200 OK in 161ms (Views: 153.0ms | ActiveRecord: 1.5ms | Allocations: 36824)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:40:57 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 93.7ms | Allocations: 29352)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 107.5ms | Allocations: 31741)
+Completed 200 OK in 115ms (Views: 107.2ms | ActiveRecord: 1.3ms | Allocations: 32230)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:41:00 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 131.1ms | Allocations: 29382)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 142.0ms | Allocations: 31786)
+Completed 200 OK in 147ms (Views: 141.7ms | ActiveRecord: 1.3ms | Allocations: 32221)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:41:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 51.9ms | Allocations: 29347)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 31736)
+Completed 200 OK in 66ms (Views: 59.5ms | ActiveRecord: 2.1ms | Allocations: 32171)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:41:03 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 40.9ms | Allocations: 29367)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 31771)
+Completed 200 OK in 56ms (Views: 50.1ms | ActiveRecord: 1.5ms | Allocations: 32206)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:41:04 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 29373)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 42.2ms | Allocations: 31762)
+Completed 200 OK in 51ms (Views: 46.6ms | ActiveRecord: 1.5ms | Allocations: 32197)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:41:28 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 88.0ms | Allocations: 12229)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 99.2ms | Allocations: 14618)
+Completed 200 OK in 103ms (Views: 99.9ms | ActiveRecord: 0.4ms | Allocations: 15051)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:41:38 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 482.3ms | Allocations: 29374)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 623.8ms | Allocations: 31774)
+Completed 200 OK in 632ms (Views: 625.2ms | ActiveRecord: 1.1ms | Allocations: 32209)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:41:44 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 11371)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 13760)
+Completed 200 OK in 37ms (Views: 33.6ms | ActiveRecord: 0.5ms | Allocations: 14193)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7cfed200%3E" for 127.0.0.1 at 2022-05-16 00:41:49 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7cfed200>"}
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 14ms (ActiveRecord: 0.6ms | Allocations: 1250)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7cfed200>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:41:49 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 11367)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 13771)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.5ms | Allocations: 14201)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:41:53 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 11373)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 13762)
+Completed 200 OK in 30ms (Views: 26.5ms | ActiveRecord: 0.5ms | Allocations: 14195)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 00:41:56 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (1.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 39.6ms | Allocations: 30559)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 32963)
+Completed 200 OK in 56ms (Views: 50.6ms | ActiveRecord: 2.1ms | Allocations: 33396)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:42:01 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 37.7ms | Allocations: 29393)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 31782)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 1.1ms | Allocations: 32217)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 00:42:05 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 35.8ms | Allocations: 30580)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 32969)
+Completed 200 OK in 58ms (Views: 50.6ms | ActiveRecord: 1.1ms | Allocations: 33402)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:10 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 18.5ms | Allocations: 11370)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 13763)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.5ms | Allocations: 14196)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:14 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 11370)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 13759)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.6ms | Allocations: 14192)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:42:17 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:17 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 11355)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 13761)
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 0.5ms | Allocations: 14191)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:42:21 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:21 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 11384)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 13788)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 1.7ms | Allocations: 14218)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:42:24 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:24 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 11367)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 13760)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.3ms | Allocations: 14190)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a007a1398%3E" for 127.0.0.1 at 2022-05-16 00:42:28 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a007a1398>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1173)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a007a1398>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:28 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 11387)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 31.4ms | Allocations: 13791)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 0.6ms | Allocations: 14221)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7e8e7eb8%3E" for 127.0.0.1 at 2022-05-16 00:42:31 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7e8e7eb8>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1170)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7e8e7eb8>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:32 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 14.5ms | Allocations: 11371)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 13775)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.6ms | Allocations: 14205)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a00416e58%3E" for 127.0.0.1 at 2022-05-16 00:42:35 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a00416e58>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 1173)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a00416e58>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:42:35 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 11367)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 13771)
+Completed 200 OK in 34ms (Views: 29.8ms | ActiveRecord: 0.4ms | Allocations: 14201)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:43:44 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 127.6ms | Allocations: 15015)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 163.6ms | Allocations: 17956)
+Completed 200 OK in 206ms (Views: 182.5ms | ActiveRecord: 2.2ms | Allocations: 18976)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7bde4040%3E" for 127.0.0.1 at 2022-05-16 00:43:48 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7bde4040>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 16ms (ActiveRecord: 0.4ms | Allocations: 1217)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7bde4040>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:43:49 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 34.3ms | Allocations: 11551)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 51.6ms | Allocations: 13955)
+Completed 200 OK in 57ms (Views: 52.2ms | ActiveRecord: 0.5ms | Allocations: 14432)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:43:54 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 48.5ms | Allocations: 11542)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 58.5ms | Allocations: 13946)
+Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.4ms | Allocations: 14379)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:43:59 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 51.3ms | Allocations: 30906)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 33310)
+Completed 200 OK in 65ms (Views: 59.8ms | ActiveRecord: 1.7ms | Allocations: 33745)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:03 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 11533)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 13922)
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 14355)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7cf49808%3E" for 127.0.0.1 at 2022-05-16 00:44:06 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7cf49808>"}
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 10ms (ActiveRecord: 2.5ms | Allocations: 1170)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7cf49808>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:07 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 11559)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 13963)
+Completed 200 OK in 39ms (Views: 33.7ms | ActiveRecord: 0.4ms | Allocations: 14393)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7df55558%3E" for 127.0.0.1 at 2022-05-16 00:44:10 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7df55558>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 17ms (ActiveRecord: 0.4ms | Allocations: 1176)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7df55558>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:10 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 17.9ms | Allocations: 11545)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 13949)
+Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.6ms | Allocations: 14379)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:44:12 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:12 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 20.5ms | Allocations: 11577)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 13981)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.3ms | Allocations: 14411)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:44:16 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:16 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 11533)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 13922)
+Completed 200 OK in 36ms (Views: 31.5ms | ActiveRecord: 0.6ms | Allocations: 14352)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a007e38b0%3E" for 127.0.0.1 at 2022-05-16 00:44:20 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a007e38b0>"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1161)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a007e38b0>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:20 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 11550)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 13954)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 0.4ms | Allocations: 14384)
+
+
+Started DELETE "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a7a07de48%3E" for 127.0.0.1 at 2022-05-16 00:44:27 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"#<Product::ActiveRecord_Relation:0x0000011a7a07de48>"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.4ms | Allocations: 1173)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a7a07de48>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:28 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 11549)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 13953)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.5ms | Allocations: 14383)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:44:31 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:44:32 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 11533)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 13937)
+Completed 200 OK in 44ms (Views: 37.1ms | ActiveRecord: 1.3ms | Allocations: 14367)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-05-16 00:45:06 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 214.2ms | Allocations: 13216)
+  Rendered products/new.html.erb within layouts/application (Duration: 226.6ms | Allocations: 13558)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 256.2ms | Allocations: 16078)
+Completed 200 OK in 280ms (Views: 259.5ms | ActiveRecord: 0.0ms | Allocations: 16504)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:45:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (14.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 110.8ms | Allocations: 30300)
+  Rendered shared/_footer.html.erb (Duration: 1.5ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 174.8ms | Allocations: 32705)
+Completed 200 OK in 191ms (Views: 156.9ms | ActiveRecord: 19.1ms | Allocations: 33218)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:45:45 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 60.3ms | Allocations: 6095)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 6189)
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 2.7ms | Allocations: 7212)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"products", :id=>nil}, missing required keys: [:id]):
+    64:                                 <!-- Protección CSRF -->
+    65:                                 <%= token_tag nil %> 
+    66:     
+    67:                                 <%= button_to "Eliminar", product_path(@product), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" }, :html => { :method => :delete, :remote => true}, onclick: "return confirmDestroy('Seguro que desea eliminar el Producto seleccionado?')"%>
+    68: 
+    69:                                 <%= button_to "Destroy this product", @product, method: :delete,class:"btn btn-boz" %>
+    70: 
+  
+app/views/products/index.html.erb:67
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:46:26 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  Rendered products/index.html.erb within layouts/application (Duration: 75.2ms | Allocations: 11335)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 11429)
+Completed 500 Internal Server Error in 99ms (ActiveRecord: 0.5ms | Allocations: 12480)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveRecord::Relation [#<Product id: 40, name: "Enormous Copper Knife", desciption: "[\"Eaque quis non.\", \"Libero est iure.\"]", price: 83520, cost: 41760, t_schedule: 2, stock: 8, img_url: "https://loremflickr.com/138/77/all", created_at: "2022-05-16 00:00:39.399622000 -0400", updated_at: "2022-05-16 00:00:39.399622000 -0400">, #<Product id: 32, name: "Lightweight Aluminum Chair", desciption: "[\"Est et sint.\", \"Vel voluptatem aspernatur.\"]", price: 146960, cost: 73480, t_schedule: 3, stock: 9, img_url: "https://loremflickr.com/94/90/all", created_at: "2022-05-16 00:00:39.356540000 -0400", updated_at: "2022-05-16 00:00:39.356540000 -0400">, #<Product id: 17, name: "Aerodynamic Wooden Gloves", desciption: "[\"Velit consequatur iste.\", \"Error consequuntur in...", price: 83060, cost: 41530, t_schedule: 4, stock: 2, img_url: "https://loremflickr.com/64/74/all", created_at: "2022-05-16 00:00:39.263555000 -0400", updated_at: "2022-05-16 00:00:39.263555000 -0400">, #<Product id: 15, name: "Fantastic Leather Coat", desciption: "[\"Animi consequatur quo.\", \"Laborum veritatis dolo...", price: 68460, cost: 34230, t_schedule: 2, stock: 5, img_url: "https://loremflickr.com/85/199/all", created_at: "2022-05-16 00:00:39.252997000 -0400", updated_at: "2022-05-16 00:00:39.252997000 -0400">, #<Product id: 18, name: "Aerodynamic Wooden Coat", desciption: "[\"Nihil est blanditiis.\", \"Aut et consequatur.\"]", price: 14040, cost: 7020, t_schedule: 3, stock: 6, img_url: "https://loremflickr.com/134/107/all", created_at: "2022-05-16 00:00:39.269147000 -0400", updated_at: "2022-05-16 00:00:39.269147000 -0400">, #<Product id: 2, name: "Intelligent Paper Shirt", desciption: "[\"Necessitatibus maiores id.\", \"Atque quidem ut.\"]", price: 12920, cost: 6460, t_schedule: 5, stock: 2, img_url: "https://loremflickr.com/54/105/all", created_at: "2022-05-16 00:00:39.184403000 -0400", updated_at: "2022-05-16 00:00:39.184403000 -0400">, #<Product id: 20, name: "Sleek Bronze Gloves", desciption: "[\"Qui reprehenderit et.\", \"Cumque est accusamus.\"]", price: 49040, cost: 24520, t_schedule: 2, stock: 1, img_url: "https://loremflickr.com/126/158/all", created_at: "2022-05-16 00:00:39.282705000 -0400", updated_at: "2022-05-16 00:00:39.282705000 -0400">, #<Product id: 30, name: "Small Copper Clock", desciption: "[\"Dicta inventore officia.\", \"Praesentium enim cum...", price: 18720, cost: 9360, t_schedule: 4, stock: 6, img_url: "https://loremflickr.com/59/110/all", created_at: "2022-05-16 00:00:39.343668000 -0400", updated_at: "2022-05-16 00:00:39.343668000 -0400">, #<Product id: 14, name: "Rustic Plastic Clock", desciption: "[\"Quo magnam et.\", \"Enim voluptas velit.\"]", price: 144540, cost: 72270, t_schedule: 5, stock: 1, img_url: "https://loremflickr.com/187/87/all", created_at: "2022-05-16 00:00:39.247445000 -0400", updated_at: "2022-05-16 00:00:39.247445000 -0400">, #<Product id: 43, name: "Awesome Leather Knife", desciption: "[\"Est corporis incidunt.\", \"Praesentium nostrum so...", price: 5040, cost: 2520, t_schedule: 6, stock: 2, img_url: "https://loremflickr.com/172/122/all", created_at: "2022-05-16 00:00:39.415004000 -0400", updated_at: "2022-05-16 00:00:39.415004000 -0400">, ...]>
+Did you mean?  to_xml):
+    66:     
+    67:                                 <%= button_to "Eliminar", product_path(@products), method: :delete, class: "btn btn-danger btn-sm", data: { confirm: "Are you sure?" }, :html => { :method => :delete, :remote => true}, onclick: "return confirmDestroy('Seguro que desea eliminar el Producto seleccionado?')"%>
+    68: 
+    69:                                 <%= button_to "Destroy this product", @products, method: :delete,class:"btn btn-boz" %>
+    70: 
+    71:                          </td>
+    72: 
+  
+app/views/products/index.html.erb:69
+app/views/products/index.html.erb:28
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:47:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:28
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (Duration: 130.4ms | Allocations: 33547)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 171.0ms | Allocations: 36488)
+Completed 200 OK in 190ms (Views: 176.9ms | ActiveRecord: 1.6ms | Allocations: 37568)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:47:34 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:78
+  Rendered products/index.html.erb within layouts/application (Duration: 146.7ms | Allocations: 33530)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 163.8ms | Allocations: 36456)
+Completed 200 OK in 181ms (Views: 172.5ms | ActiveRecord: 2.0ms | Allocations: 37534)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:48:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 262.6ms | Allocations: 33441)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 291.9ms | Allocations: 36382)
+Completed 200 OK in 336ms (Views: 313.4ms | ActiveRecord: 3.0ms | Allocations: 37460)
+
+
+Started GET "/products?q%5Bs%5D=name+asc" for 127.0.0.1 at 2022-05-16 00:48:27 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"name asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (4.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 68.0ms | Allocations: 30525)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 80.6ms | Allocations: 32914)
+Completed 200 OK in 96ms (Views: 76.8ms | ActiveRecord: 4.8ms | Allocations: 33596)
+
+
+Started GET "/products?q%5Bs%5D=desciption+asc" for 127.0.0.1 at 2022-05-16 00:48:29 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"desciption asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."desciption" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 30521)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 32910)
+Completed 200 OK in 76ms (Views: 69.9ms | ActiveRecord: 1.3ms | Allocations: 33423)
+
+
+Started GET "/products?q%5Bs%5D=cost+asc" for 127.0.0.1 at 2022-05-16 00:48:31 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"cost asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."cost" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 39.8ms | Allocations: 30529)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 32933)
+Completed 200 OK in 56ms (Views: 51.1ms | ActiveRecord: 0.9ms | Allocations: 33446)
+
+
+Started GET "/products?q%5Bs%5D=price+asc" for 127.0.0.1 at 2022-05-16 00:48:33 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"price asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 43.8ms | Allocations: 30502)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 32891)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 1.0ms | Allocations: 33404)
+
+
+Started GET "/products?q%5Bs%5D=stock+asc" for 127.0.0.1 at 2022-05-16 00:48:35 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"stock asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."stock" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 30527)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 32931)
+Completed 200 OK in 72ms (Views: 66.6ms | ActiveRecord: 1.3ms | Allocations: 33444)
+
+
+Started GET "/products?q%5Bs%5D=t_schedule+asc" for 127.0.0.1 at 2022-05-16 00:48:36 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"t_schedule asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."t_schedule" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 42.5ms | Allocations: 30536)
+  Rendered shared/_footer.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 32925)
+Completed 200 OK in 58ms (Views: 53.4ms | ActiveRecord: 0.9ms | Allocations: 33446)
+
+
+Started GET "/products?q%5Bs%5D=price+asc" for 127.0.0.1 at 2022-05-16 00:48:41 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"price asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."price" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 31.4ms | Allocations: 30503)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 32892)
+Completed 200 OK in 46ms (Views: 40.3ms | ActiveRecord: 1.4ms | Allocations: 33405)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=3&commit=Buscar" for 127.0.0.1 at 2022-05-16 00:48:48 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>"3"}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.1ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" WHERE "products"."t_schedule" = 3 LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 30.7ms | Allocations: 15017)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 17421)
+Completed 200 OK in 54ms (Views: 37.7ms | ActiveRecord: 2.1ms | Allocations: 18145)
+
+
+Started GET "/products?q%5Bt_schedule_eq%5D=&commit=Buscar" for 127.0.0.1 at 2022-05-16 00:48:57 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"t_schedule_eq"=>""}, "commit"=>"Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 44.3ms | Allocations: 30637)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 33041)
+Completed 200 OK in 61ms (Views: 55.3ms | ActiveRecord: 0.9ms | Allocations: 33512)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:05 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 82.6ms | Allocations: 30023)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 32427)
+Completed 200 OK in 130ms (Views: 110.2ms | ActiveRecord: 1.6ms | Allocations: 32862)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 52.8ms | Allocations: 30033)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 32422)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 1.0ms | Allocations: 32857)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 50.0ms | Allocations: 30024)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 32413)
+Completed 200 OK in 65ms (Views: 60.6ms | ActiveRecord: 1.0ms | Allocations: 32848)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 42.2ms | Allocations: 30036)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 32440)
+Completed 200 OK in 56ms (Views: 52.3ms | ActiveRecord: 1.0ms | Allocations: 32875)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 122.7ms | Allocations: 30161)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 135.9ms | Allocations: 32716)
+Completed 200 OK in 168ms (Views: 164.3ms | ActiveRecord: 1.1ms | Allocations: 33151)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:09 -0400
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 30314)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 32760)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.8ms | Allocations: 33207)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:09 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 30314)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 30)
+  Rendered layout layouts/application.html.erb (Duration: 44.2ms | Allocations: 32745)
+Completed 200 OK in 49ms (Views: 44.4ms | ActiveRecord: 1.0ms | Allocations: 33192)
+
+
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 37.2ms | Allocations: 30024)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 32413)
+Completed 200 OK in 64ms (Views: 59.7ms | ActiveRecord: 0.9ms | Allocations: 32848)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 30018)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 32422)
+Completed 200 OK in 63ms (Views: 55.8ms | ActiveRecord: 2.3ms | Allocations: 32857)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 39.2ms | Allocations: 30044)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 60.2ms | Allocations: 32448)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.9ms | Allocations: 32883)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:11 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:75
+  Rendered products/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 30024)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 32428)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 1.2ms | Allocations: 32863)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:50:50 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 90.6ms | Allocations: 10122)
+  Rendered layout layouts/application.html.erb (Duration: 91.4ms | Allocations: 10216)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.4ms | Allocations: 11211)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000013920>
+Did you mean?  @products):
+    50: 
+    51:                         <td class="align-middle text-center">
+    52:                           <%= link_to "Show this product", @product, class: "lk-boz" %>
+    53:                           <%= link_to "Show this product", product,class:"lk-boz" %>
+    54:                         </td> 
+    55:                         <td class="align-middle text-center">
+    56:                           <%= link_to "Back to products", products_path,class: "lk-boz" %>
+  
+app/views/products/index.html.erb:53
+app/views/products/index.html.erb:27
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:52:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 95.4ms | Allocations: 10158)
+  Rendered layout layouts/application.html.erb (Duration: 96.2ms | Allocations: 10252)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 3.6ms | Allocations: 11303)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `product' for #<ActionView::Base:0x00000000013c68>
+Did you mean?  @products):
+    50: 
+    51:                         <td class="align-middle text-center">
+    52:                           <%= link_to "Show this product", @product, class: "lk-boz" %>
+    53:                           <%= link_to "Show this product", product,class:"lk-boz" %>
+    54:                         </td> 
+    55:                         <td class="align-middle text-center">
+    56:                           <%= link_to "Edit this product", edit_product_path(@product),class:"lk-boz" %> |
+  
+app/views/products/index.html.erb:53
+app/views/products/index.html.erb:27
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:52:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 5985)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 6079)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.1ms | Allocations: 7130)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"products", :id=>nil}, missing required keys: [:id]):
+    52:                           <%= link_to "Show this product", @product, class: "lk-boz" %>
+    53:                         </td> 
+    54:                         <td class="align-middle text-center">
+    55:                           <%= link_to "Edit this product", edit_product_path(@product),class:"lk-boz" %> |
+    56:                         </td> 
+    57: 
+    58:   <%= button_to "Destroy this product", @product, method: :delete,class:"btn btn-boz" %>
+  
+app/views/products/index.html.erb:55
+app/views/products/index.html.erb:27
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:07 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (8.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 130.3ms | Allocations: 39219)
+  Rendered shared/_footer.html.erb (Duration: 1.9ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 170.5ms | Allocations: 42160)
+Completed 200 OK in 183ms (Views: 168.7ms | ActiveRecord: 9.2ms | Allocations: 43240)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:11 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:12 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 56.0ms | Allocations: 35748)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 38137)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 1.2ms | Allocations: 38623)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:13 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 68.3ms | Allocations: 35736)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 89.3ms | Allocations: 38323)
+Completed 200 OK in 103ms (Views: 91.2ms | ActiveRecord: 1.0ms | Allocations: 38776)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:14 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:14 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:15 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 75.0ms | Allocations: 35736)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 38140)
+Completed 200 OK in 87ms (Views: 81.4ms | ActiveRecord: 2.9ms | Allocations: 38572)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:16 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:16 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 48.6ms | Allocations: 35747)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 38151)
+Completed 200 OK in 67ms (Views: 59.2ms | ActiveRecord: 1.1ms | Allocations: 38583)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:17 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:17 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 83.0ms | Allocations: 35773)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 96.3ms | Allocations: 38177)
+Completed 200 OK in 102ms (Views: 95.6ms | ActiveRecord: 1.9ms | Allocations: 38609)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:18 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:18 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 60.8ms | Allocations: 35751)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 38155)
+Completed 200 OK in 77ms (Views: 69.5ms | ActiveRecord: 4.5ms | Allocations: 38587)
+
+
+Started DELETE "/products" for 127.0.0.1 at 2022-05-16 00:53:19 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/products"):
+  
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:53:19 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 41.2ms | Allocations: 35732)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 38136)
+Completed 200 OK in 62ms (Views: 56.9ms | ActiveRecord: 0.8ms | Allocations: 38568)
+
+
+Started GET "/products/%23%3CProduct::ActiveRecord_Relation:0x0000011a00982b58%3E/edit" for 127.0.0.1 at 2022-05-16 00:53:25 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"#<Product::ActiveRecord_Relation:0x0000011a00982b58>"}
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Completed 404 Not Found in 11ms (ActiveRecord: 1.1ms | Allocations: 983)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Product with 'id'=#<Product::ActiveRecord_Relation:0x0000011a00982b58>):
+  
+app/controllers/products_controller.rb:64:in `set_product'
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:54:28 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (2.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:77
+  Rendered products/index.html.erb within layouts/application (Duration: 201.6ms | Allocations: 38950)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 237.4ms | Allocations: 41896)
+Completed 200 OK in 289ms (Views: 264.0ms | ActiveRecord: 2.9ms | Allocations: 42918)
+
+
+Started GET "/products/40/edit" for 127.0.0.1 at 2022-05-16 00:54:31 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (2.6ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 22.8ms | Allocations: 2955)
+  Rendered products/edit.html.erb within layouts/application (Duration: 28.4ms | Allocations: 3352)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 5740)
+Completed 200 OK in 58ms (Views: 44.2ms | ActiveRecord: 2.6ms | Allocations: 6679)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:06 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (1.0ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 146.4ms | Allocations: 32529)
+  Rendered shared/_footer.html.erb (Duration: 2.4ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 169.2ms | Allocations: 35455)
+Completed 200 OK in 192ms (Views: 177.3ms | ActiveRecord: 1.9ms | Allocations: 36511)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:10 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 142.2ms | Allocations: 29096)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 153.0ms | Allocations: 31500)
+Completed 200 OK in 161ms (Views: 153.7ms | ActiveRecord: 1.0ms | Allocations: 31989)
+
+
+Started GET "/products/40/edit" for 127.0.0.1 at 2022-05-16 00:55:12 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 8.4ms | Allocations: 2936)
+  Rendered products/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3330)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 5718)
+Completed 200 OK in 34ms (Views: 26.3ms | ActiveRecord: 0.3ms | Allocations: 6634)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:15 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 29113)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 62.6ms | Allocations: 31517)
+Completed 200 OK in 67ms (Views: 62.9ms | ActiveRecord: 1.0ms | Allocations: 31952)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:55:23 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 12111)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 14500)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.4ms | Allocations: 14933)
+
+
+Started DELETE "/products/38" for 127.0.0.1 at 2022-05-16 00:55:29 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"38"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (7.8ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 38]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 69ms (ActiveRecord: 13.7ms | Allocations: 2808)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:29 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 29134)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 31528)
+Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 1.3ms | Allocations: 32003)
+
+
+Started GET "/products?page=3" for 127.0.0.1 at 2022-05-16 00:55:35 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"3"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 40]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 10156)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 12554)
+Completed 200 OK in 64ms (Views: 55.7ms | ActiveRecord: 0.4ms | Allocations: 12987)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:38 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 45.9ms | Allocations: 29115)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 31519)
+Completed 200 OK in 63ms (Views: 59.0ms | ActiveRecord: 0.9ms | Allocations: 31954)
+
+
+Started DELETE "/products/40" for 127.0.0.1 at 2022-05-16 00:55:41 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"40"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 40]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 13ms (ActiveRecord: 1.9ms | Allocations: 2450)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:42 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 41.8ms | Allocations: 29109)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 31514)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 1.2ms | Allocations: 31950)
+
+
+Started DELETE "/products/32" for 127.0.0.1 at 2022-05-16 00:55:44 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"32"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 32]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 13ms (ActiveRecord: 1.8ms | Allocations: 2452)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:44 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 37.3ms | Allocations: 29114)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 31510)
+Completed 200 OK in 53ms (Views: 48.1ms | ActiveRecord: 0.8ms | Allocations: 31946)
+
+
+Started DELETE "/products/17" for 127.0.0.1 at 2022-05-16 00:55:46 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"17"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 17]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 15ms (ActiveRecord: 1.5ms | Allocations: 2452)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:46 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 42.1ms | Allocations: 29132)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 55.2ms | Allocations: 31543)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 1.2ms | Allocations: 31979)
+
+
+Started DELETE "/products/15" for 127.0.0.1 at 2022-05-16 00:55:48 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"15"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (1.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 15]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 14ms (ActiveRecord: 2.2ms | Allocations: 2458)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:49 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 45.1ms | Allocations: 28605)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 31010)
+Completed 200 OK in 63ms (Views: 58.0ms | ActiveRecord: 1.5ms | Allocations: 31446)
+
+
+Started DELETE "/products/18" for 127.0.0.1 at 2022-05-16 00:55:52 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"18"}
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 18]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms | Allocations: 2458)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:52 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 47.5ms | Allocations: 28624)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 31029)
+Completed 200 OK in 65ms (Views: 58.6ms | ActiveRecord: 1.1ms | Allocations: 31465)
+
+
+Started DELETE "/products/2" for 127.0.0.1 at 2022-05-16 00:55:54 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 13ms (ActiveRecord: 1.4ms | Allocations: 2461)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:55 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 50.6ms | Allocations: 28602)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 31013)
+Completed 200 OK in 71ms (Views: 64.0ms | ActiveRecord: 1.6ms | Allocations: 31449)
+
+
+Started DELETE "/products/20" for 127.0.0.1 at 2022-05-16 00:55:57 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"20"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.9ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 20]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 15ms (ActiveRecord: 2.0ms | Allocations: 2452)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:57 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 50.6ms | Allocations: 28634)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 66.5ms | Allocations: 31043)
+Completed 200 OK in 71ms (Views: 66.8ms | ActiveRecord: 0.9ms | Allocations: 31479)
+
+
+Started DELETE "/products/30" for 127.0.0.1 at 2022-05-16 00:55:59 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"30"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 30]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms | Allocations: 2452)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:55:59 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 28608)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 31013)
+Completed 200 OK in 47ms (Views: 42.9ms | ActiveRecord: 1.1ms | Allocations: 31449)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 00:56:05 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:27
+  Rendered products/index.html.erb within layouts/application (Duration: 29.2ms | Allocations: 23431)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 25835)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 0.5ms | Allocations: 26268)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:56:08 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 79.5ms | Allocations: 28624)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 124.7ms | Allocations: 31028)
+Completed 200 OK in 131ms (Views: 127.2ms | ActiveRecord: 1.0ms | Allocations: 31463)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:56:22 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:27
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:76
+  Rendered products/index.html.erb within layouts/application (Duration: 24.9ms | Allocations: 28605)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 31007)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 1.0ms | Allocations: 31442)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:57:13 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (9.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (2.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 189.3ms | Allocations: 27838)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 212.9ms | Allocations: 30779)
+Completed 200 OK in 257ms (Views: 221.5ms | ActiveRecord: 12.5ms | Allocations: 31802)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:57:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (2.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 90.0ms | Allocations: 27846)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 115.5ms | Allocations: 30787)
+Completed 200 OK in 132ms (Views: 122.0ms | ActiveRecord: 3.6ms | Allocations: 31865)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:58:40 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 120.7ms | Allocations: 27476)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 141.0ms | Allocations: 30417)
+Completed 200 OK in 165ms (Views: 152.1ms | ActiveRecord: 1.2ms | Allocations: 31495)
+
+
+Started GET "/products/27" for 127.0.0.1 at 2022-05-16 00:58:55 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (3.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 6.3ms | Allocations: 703)
+  Rendered products/show.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1580)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 3968)
+Completed 200 OK in 87ms (Views: 39.5ms | ActiveRecord: 3.4ms | Allocations: 4930)
+
+
+Started GET "/products/27/edit" for 127.0.0.1 at 2022-05-16 00:59:00 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 26.1ms | Allocations: 2945)
+  Rendered products/edit.html.erb within layouts/application (Duration: 32.3ms | Allocations: 3334)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 5735)
+Completed 200 OK in 57ms (Views: 46.9ms | ActiveRecord: 0.5ms | Allocations: 6640)
+
+
+Started GET "/products/27" for 127.0.0.1 at 2022-05-16 00:59:06 -0400
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 423)
+  Rendered products/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1015)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3403)
+Completed 200 OK in 21ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 4255)
+
+
+Started DELETE "/products/27" for 127.0.0.1 at 2022-05-16 00:59:11 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"27"}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (6.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 27]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 44ms (ActiveRecord: 8.6ms | Allocations: 2533)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:59:11 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 107.2ms | Allocations: 24095)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 120.2ms | Allocations: 26504)
+Completed 200 OK in 127ms (Views: 119.9ms | ActiveRecord: 1.6ms | Allocations: 27011)
+
+
+Started GET "/products/39/edit" for 127.0.0.1 at 2022-05-16 00:59:21 -0400
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 3.5ms | Allocations: 2377)
+  Rendered products/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2548)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4936)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 0.3ms | Allocations: 5788)
+
+
+Started PATCH "/products/39" for 127.0.0.1 at 2022-05-16 00:59:24 -0400
+Processing by ProductsController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "product"=>{"name"=>"Small Bronze Pants", "desciption"=>"[\"Nam omnis facere.\", \"Beatae alias repellendus.\"]", "price"=>"14020", "cost"=>"7010", "t_schedule"=>"6", "stock"=>"9", "img_url"=>"https://loremflickr.com/148/183/all"}, "commit"=>"Actualizar Producto", "id"=>"39"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+Redirected to http://127.0.0.1:3000/products/39
+Completed 302 Found in 32ms (ActiveRecord: 0.3ms | Allocations: 1510)
+
+
+Started GET "/products/39" for 127.0.0.1 at 2022-05-16 00:59:24 -0400
+Processing by ProductsController#show as TURBO_STREAM
+  Parameters: {"id"=>"39"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  Rendering layout layouts/application.html.erb
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/_product.html.erb (Duration: 0.6ms | Allocations: 423)
+  Rendered products/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1064)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3457)
+Completed 200 OK in 19ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 4312)
+
+
+Started DELETE "/products/39" for 127.0.0.1 at 2022-05-16 00:59:27 -0400
+Processing by ProductsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"39"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/products_controller.rb:64:in `set_product'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mProduct Destroy (2.1ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 39]]
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/products_controller.rb:53:in `destroy'
+Redirected to http://127.0.0.1:3000/products
+Completed 302 Found in 17ms (ActiveRecord: 3.2ms | Allocations: 2446)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 00:59:27 -0400
+Processing by ProductsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 27.7ms | Allocations: 24098)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 26504)
+Completed 200 OK in 44ms (Views: 40.3ms | ActiveRecord: 1.1ms | Allocations: 26940)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:00:32 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (2.3ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 262.5ms | Allocations: 26904)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 307.9ms | Allocations: 29845)
+Completed 200 OK in 410ms (Views: 341.2ms | ActiveRecord: 3.0ms | Allocations: 30868)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:00:49 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (3.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 208.1ms | Allocations: 26899)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 221.1ms | Allocations: 29840)
+Completed 200 OK in 240ms (Views: 222.8ms | ActiveRecord: 4.0ms | Allocations: 30918)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-05-16 01:00:56 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 17.5ms | Allocations: 2823)
+  Rendered products/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 3147)
+  Rendered shared/_footer.html.erb (Duration: 0.3ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 5549)
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 5941)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2022-05-16 01:00:57 -0400
+Processing by ProductsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 2.9ms | Allocations: 2216)
+  Rendered products/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2340)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 4736)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 5048)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:01:00 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 49.9ms | Allocations: 23547)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 62.5ms | Allocations: 25946)
+Completed 200 OK in 70ms (Views: 62.8ms | ActiveRecord: 1.0ms | Allocations: 26414)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:01:56 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 93.3ms | Allocations: 26887)
+  Rendered shared/_footer.html.erb (Duration: 0.7ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 112.8ms | Allocations: 29828)
+Completed 200 OK in 126ms (Views: 120.6ms | ActiveRecord: 1.4ms | Allocations: 30852)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:02:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.9ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:4
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 94.7ms | Allocations: 26911)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 113.5ms | Allocations: 29852)
+Completed 200 OK in 136ms (Views: 123.1ms | ActiveRecord: 1.7ms | Allocations: 30930)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:03:27 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.5ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 107.6ms | Allocations: 26898)
+  Rendered shared/_footer.html.erb (Duration: 1.2ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 131.6ms | Allocations: 29829)
+Completed 200 OK in 156ms (Views: 141.7ms | ActiveRecord: 0.9ms | Allocations: 30907)
+
+
+Started GET "/products" for 127.0.0.1 at 2022-05-16 01:03:51 -0400
+Processing by ProductsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 98.4ms | Allocations: 26899)
+  Rendered shared/_footer.html.erb (Duration: 1.0ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 118.0ms | Allocations: 29838)
+Completed 200 OK in 140ms (Views: 127.5ms | ActiveRecord: 1.3ms | Allocations: 30916)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 01:04:01 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (1.0ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 128.3ms | Allocations: 19112)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 142.6ms | Allocations: 21516)
+Completed 200 OK in 150ms (Views: 142.3ms | ActiveRecord: 1.7ms | Allocations: 22003)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 01:04:18 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 57.3ms | Allocations: 19546)
+  Rendered shared/_footer.html.erb (Duration: 1.3ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 22488)
+Completed 200 OK in 86ms (Views: 79.3ms | ActiveRecord: 0.9ms | Allocations: 23510)
+
+
+Started GET "/products?page=2" for 127.0.0.1 at 2022-05-16 01:04:53 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 53.3ms | Allocations: 19528)
+  Rendered shared/_footer.html.erb (Duration: 1.1ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 22463)
+Completed 200 OK in 82ms (Views: 75.7ms | ActiveRecord: 1.2ms | Allocations: 23539)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+asc" for 127.0.0.1 at 2022-05-16 01:05:00 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (1.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (4.2ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 374.6ms | Allocations: 17455)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 469.2ms | Allocations: 19854)
+Completed 200 OK in 485ms (Views: 467.7ms | ActiveRecord: 5.3ms | Allocations: 20444)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:05:01 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (3.8ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 72.4ms | Allocations: 17456)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 86.9ms | Allocations: 19860)
+Completed 200 OK in 110ms (Views: 83.4ms | ActiveRecord: 4.5ms | Allocations: 20378)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+asc" for 127.0.0.1 at 2022-05-16 01:05:06 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name asc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.8ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 37.1ms | Allocations: 17448)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 19852)
+Completed 200 OK in 56ms (Views: 49.4ms | ActiveRecord: 1.7ms | Allocations: 20363)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:05:14 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.6ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:32
+  Rendered products/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 17463)
+  Rendered shared/_footer.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 19855)
+Completed 200 OK in 51ms (Views: 44.7ms | ActiveRecord: 1.2ms | Allocations: 20366)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:06:19 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (1.1ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:33
+  Rendered products/index.html.erb within layouts/application (Duration: 109.2ms | Allocations: 19560)
+  Rendered shared/_footer.html.erb (Duration: 0.5ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | Allocations: 22501)
+Completed 200 OK in 176ms (Views: 148.1ms | ActiveRecord: 1.5ms | Allocations: 23601)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:06:37 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:33
+  Rendered products/index.html.erb within layouts/application (Duration: 104.5ms | Allocations: 19561)
+  Rendered shared/_footer.html.erb (Duration: 0.8ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 122.4ms | Allocations: 22493)
+Completed 200 OK in 161ms (Views: 143.9ms | ActiveRecord: 1.2ms | Allocations: 23676)
+
+
+Started GET "/products?q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:06:44 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.7ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/views/products/index.html.erb:33
+  Rendered products/index.html.erb within layouts/application (Duration: 85.7ms | Allocations: 22982)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 96.7ms | Allocations: 25371)
+Completed 200 OK in 101ms (Views: 96.2ms | ActiveRecord: 1.6ms | Allocations: 25963)
+
+
+Started GET "/products?page=2&q%5Bs%5D=name+desc" for 127.0.0.1 at 2022-05-16 01:06:45 -0400
+Processing by ProductsController#index as HTML
+  Parameters: {"page"=>"2", "q"=>{"s"=>"name desc"}}
+  Rendering layout layouts/application.html.erb
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Count (0.4ms)[0m  [1m[34mSELECT COUNT(DISTINCT "products"."id") FROM "products"[0m
+  ↳ app/views/products/index.html.erb:14
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "products".* FROM "products" ORDER BY "products"."name" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 20]]
+  ↳ app/views/products/index.html.erb:33
+  Rendered products/index.html.erb within layouts/application (Duration: 113.8ms | Allocations: 17416)
+  Rendered shared/_footer.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered layout layouts/application.html.erb (Duration: 128.8ms | Allocations: 19820)
+Completed 200 OK in 134ms (Views: 128.9ms | ActiveRecord: 0.9ms | Allocations: 20331)
+
+
