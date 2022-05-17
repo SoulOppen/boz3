@@ -38,8 +38,7 @@ Hito 2 - Requerimientos
 ✔ OK
 
 2. Crear la ruta api/news. (2 Puntos)
-La ruta debe entregar los últimos 20 productos o servicios de forma personalizada. Debe crear el endpoint api/date1/date2 que entregue todos los productos o
-servicios en formato Json que fueron creados entre la date1 y date2.
+La ruta debe entregar los últimos 20 productos o servicios de forma personalizada. Debe crear el endpoint api/date1/date2 que entregue todos los productos o servicios en formato Json que fueron creados entre la date1 y date2.
 => Requerimiento 2: Crear la ruta api/news. No veo las rutas que definen la API, por ahora 0 puntos
 ●  Necesitamos ayuda en este punto, no entendemos el requerimiento
 
