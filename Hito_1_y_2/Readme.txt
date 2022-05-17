@@ -13,6 +13,7 @@ Hito 1 - Requerimientos
   Se debe realizar bajo la metodología ToDo. Se puede usar Trello, Project Board (GitHub), Kanban Board (GitLab) u otros.
 => Requerimiento 2: Tablero y tareas. Buen tablero, ordenado y efectivo, no veo la asignación de las tareas (quien le toco hacer que tarea) ni tampoco el estado de avance. (0 puntos por ahora)
 ●  Necesitamos ingresar en conjunto para validar lo solicitado (por la version de prueba tenemos solo hasta el 18-May-2022) en este punto, nosotros entendemos que el requerimiento esta cumplido. Se envio invitacion por email a caraya.salazar@gmail.com, el acceso a Trello : https://trello.com/b/lteYG8zi/boz-emprenddigital-proy-kanban
+●  Se agrega arhivo BOZ-Proy-(Trello_Kanban).pdf, para rev de tarjetas.
 
 3. Realizar un modelo físico del proyecto. (3 puntos)
    Se puede realizar en distintas plataformas como Draw.io, dbdiagram.io u otras.
