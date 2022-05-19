@@ -4,7 +4,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3"
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
@@ -42,6 +41,7 @@ gem 'bootstrap4-kaminari-views'
 # Ransack is use to implement advanced search capability https://activerecord-hackery.github.io/ransack/
 gem 'ransack'
 
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -52,13 +52,12 @@ gem 'ransack'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+
 gem "tzinfo-data" #, platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -89,3 +88,11 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+#Gemas hito3:
+gem "devise"
+gem "cancancan"
+gem "activeadmin"
+gem "cocoon"
+# Use Sass to process CSS
+# gem "sassc-rails"
+gem "sass-rails"
